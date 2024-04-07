@@ -15,3 +15,5 @@ app.autodiscover_tasks()
 def debug_task():
     time.sleep(3)
     print('hello from debug_task')
+
+    

@@ -3,6 +3,7 @@ from django.core.validators import MaxValueValidator
 from clients.models import Client
 from .task import set_price
 
+
 class Service(models.Model):
     name = models.CharField(max_length=50)
     full_price = models.PositiveIntegerField()
@@ -22,7 +23,6 @@ class Plan(models.Model):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.__discount_percent = self.discount_percent
-
 
 
     def save(self, *args, **kwargs):

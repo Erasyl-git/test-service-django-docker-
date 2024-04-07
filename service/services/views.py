@@ -25,3 +25,4 @@ class SubscriptionView(ReadOnlyModelViewSet):
 
         return response
     
+

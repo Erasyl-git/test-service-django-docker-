@@ -17,3 +17,4 @@ def set_price(subscription_id):
 
     subscription.price = subscription.annotate_price
     subscription.save()
+
