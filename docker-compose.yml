@@ -42,4 +42,24 @@ services:
     volumes:
       - ./service:/service  
     depends_on:
-      - redis  # Corrected from "reids"
+      - redis  
+      - database
+
+    environment:
+      - DB_HOST=database
+      - DB_NAME=dbname
+      - DB_USER=dbuser
+      - DB_PASS=pass
+
+  flower:  
+    build:
+      context: .
+    hostname: flower
+    entrypoint: celery
+    command: -A celery_app.app flower
+
+    depends_on:
+      - redis  
+    ports:
+      - "1234:5555"
+

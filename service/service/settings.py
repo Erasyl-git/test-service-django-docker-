@@ -120,5 +120,5 @@ LOGGING = {
     }
 }
 
-CELERY_BROCKER_URL = 'redis://redis:6379/0'
+CELERY_BROKER_URL = 'redis://redis:6379/1'
 
